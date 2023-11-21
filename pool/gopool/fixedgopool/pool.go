@@ -2,7 +2,6 @@ package fixedgopool
 
 import (
 	"context"
-	"fmt"
 )
 
 type GoPool struct {
@@ -35,7 +34,7 @@ func (p *GoPool) worker(ctx context.Context) {
 			job.Run()
 		case <-ctx.Done():
 			// 停止
-			fmt.Println("worker stop...")
+			//fmt.Println("worker stop...")
 			return
 		}
 	}
