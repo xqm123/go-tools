@@ -35,7 +35,7 @@ func (p *GoPool) worker(ctx context.Context) {
 			job.Run()
 		case <-ctx.Done():
 			// 停止
-			fmt.Println("worker停止了...")
+			fmt.Println("worker stop...")
 			return
 		}
 	}
