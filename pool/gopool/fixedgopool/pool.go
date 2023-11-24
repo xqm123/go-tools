@@ -73,7 +73,7 @@ func (p *GoPool) addJob(job Func) {
 	if p.closed {
 		return
 	}
-	defer p.jobsWg.Add(1)
+	p.jobsWg.Add(1)
 	p.jobs <- job
 
 }
